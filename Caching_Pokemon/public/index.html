@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokémon Caching Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Pokémon Caching Demo</h1>
+  <div class="search-container">
+    <input type="text" id="pokemonName" placeholder="Enter Pokémon name" oninput="showSuggestions(this.value)" autocomplete="off" />
+    <ul id="suggestions" class="suggestions"></ul>
+    <button onclick="fetchPokemon()">Search</button>
+  </div>
+  <div id="cardContainer"></div>
+  <script src="script.js"></script>
+</body>
+</html>
