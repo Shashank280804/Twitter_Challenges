@@ -21,7 +21,8 @@ async function fetchPokemon() {
   if (!name) return;
 
   try {
-    const res = await fetch(`/pokemon/${name}`);
+    const res = await fetch(`http://localhost:5000/pokemon/${name}`);
+
     const { source, data } = await res.json();
 
     const card = document.createElement('div');

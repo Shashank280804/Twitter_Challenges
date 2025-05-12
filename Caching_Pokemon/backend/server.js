@@ -2,10 +2,15 @@ const express = require('express');
 const redis = require('redis');
 const path = require('path');
 require('dotenv').config();
+const cors = require('cors');
+
+
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 const REDIS_PORT = process.env.REDIS_PORT || 6379;
+app.use(cors());
 
 const client = redis.createClient({ url: `redis://localhost:${REDIS_PORT}` });
 
